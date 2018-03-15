@@ -1,27 +1,20 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actionCreators from './../actions'; 
 import Box from './../components/Box/'; 
 
 class BoxContainer extends Component {
 	render () {
 		return (
-			<Box /> 
-			)
+      <Box handleClick={this.props.loadImage} image = {this.props.url}/> 
+		)
 	}
 }
 
-export default BoxContainer; 
-
-/*
-import * as actionCreators from './../action/...'; 
-import { connect } from 'react-redux'; 
-
-
-const mapStateToProps(state){
+const mapStateToProps = (state) =>{
 	return state
 }
 
 export default connect(mapStateToProps, actionCreators)(BoxContainer)
 
-<Box url_image = {this.props.url}/> 
-
-*/	
+// export default BoxContainer; 

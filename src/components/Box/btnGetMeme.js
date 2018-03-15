@@ -3,7 +3,7 @@ import React from 'react';
 const ButtonMeme = () => {
 	return (
 			<div>
-				<button>Get meme</button>
+				<button onClick{()=> {this.props.handleClick()}}=>Get meme</button>
 			</div>
 		)
 }

@@ -6,7 +6,7 @@ class Box extends Component {
 	render () {
 		return (
 				<div className="allinBox">
-					<div className="memeBox"></div>
+					<div backgroundImage:`${this.props.image}` className="memeBox"></div>
 					<ButtonMeme /> 
 				</div> 
 			)
