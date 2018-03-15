@@ -6,7 +6,7 @@ class Box extends Component {
 	render () {
 		return (
 				<div className="allinBox">
-					<div backgroundImage:`${this.props.image}` className="memeBox"></div>
+					<div style={{backgroundImage: `${this.props.image}`}} className="memeBox"></div>
 					<ButtonMeme /> 
 				</div> 
 			)
@@ -14,20 +14,3 @@ class Box extends Component {
 }
 
 export default Box; 
-
-/*
-
-class Box extends Component {
-	render () {
-		return (
-				<div className="allinBox">
-					<div style = {{
-						backgroundImage:`$(this.props.url)`
-					}} className="memeBox"></div>
-					<ButtonMeme /> 
-				</div> 
-			)
-	}
-}
-
-*/

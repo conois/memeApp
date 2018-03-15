@@ -3,7 +3,7 @@ let defaultState={
 }
 
 const mainReducer = (state=defaultState, action)=>{
-  if(action.type==="CHANGE_IMAGE"){
+  if (action.type==="CHANGE_IMAGE") {
     return {
       ...state,
       image:action.image
