@@ -1,18 +1,18 @@
 let defaultState={
-  image: "https://i.imgflip.com/1jwhww.jpg"
+    color:"red"
 }
 
-const mainReducer = (state=defaultState, action)=>{
-  if (action.type==="CHANGE_IMAGE") {
-    return {
-      ...state,
-      image:action.image
+const mainReducer=(state=defaultState,action)=>{
+    if(action.type==="CHANGE_COLOR"){
+        return{
+            ...state,
+            color:action.color
+        }
+    } else{
+        return{
+            ...state
+        }
     }
-  } else {
-    return{
-      ...state
-    }
-  }
 }
 
 export default mainReducer;

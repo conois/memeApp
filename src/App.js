@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
-
-//Components
-import BoxContainer from './containers/box-container';
-import Titulo from './components/Title/';
-
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Titulo /> 
-        <BoxContainer />
+      <div className="App">
+      
       </div>
     );
   }
