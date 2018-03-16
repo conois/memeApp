@@ -1,17 +1,17 @@
-import axios from 'axios';
+import axios from "axios";
 
-export function loadImage(){
-  return(dispatch) => {
-    return axios.get("https://api.imgflip.com/get_memes")
-    .then((response) => {
-      dispatch(changeImage(response.data.memes.url));
-    })
-  }
+export function loadColor(){
+    return(dispatch)=>{
+        return axios.get("http://www.colr.org/json/color/random").then((response)=>{
+            dispatch(changeColor("#"+response.data.new_color));
+            console.log(response);
+        })
+    }
 }
 
-export function changeImage(image) {
-  return {
-    type: "CHANGE_IMAGE",
-    image
-  }
+export function changeColor(color){
+    return{
+        type:"CHANGE_COLOR",
+        color:color
+    }
 }
